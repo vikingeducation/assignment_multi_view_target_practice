@@ -30,7 +30,7 @@ TargetPractice.config(
 					'@parent.child': {
 						template: 'Targeting unnamed view child from child state'
 					},
-					'name-child@parent.child': {
+					'named-child@parent.child': {
 						template: 'Targeting named child from child state'
 					},
 					'named-parent@': {
@@ -38,6 +38,29 @@ TargetPractice.config(
 					},
 					'main-header@': {
 						template: 'Targeting main header from child state'
+					}
+				}
+			})
+			.state('parent.child.grandchild', {
+				url: 'grandchild',
+				views: {
+					'@parent.child': {
+						templateUrl: 'templates/grandchild.html'
+					},
+					'@parent.child.grandchild': {
+						template: 'Targeting unnamed grandchild view from grandchild state'
+					},
+					'named-grandchild@parent.child.grandchild': {
+						template: 'Targeting named grandchild from grandchild state'
+					},
+					'named-child@parent.child': {
+						template: 'Targeting named child from grandchild state'
+					},
+					'named-parent@': {
+						template: 'Targeting named parent from grandchild state'
+					},
+					'main-header@': {
+						template: 'Targeting main header from grandchild state'
 					}
 				}
 			})
