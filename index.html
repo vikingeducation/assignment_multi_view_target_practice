@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="TargetPractice">
+
+<head>
+  <title>Multi-View Target Practice</title>
+  <!-- underscore -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+  <!-- Angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+
+  <!-- ui-router -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body class="container">
+
+  <h1>Multi-View Target Practice</h1><span ui-view="main-header"></span>
+
+  <h2>Parent</h2>
+
+  <div ui-view></div>
+  <div ui-view="named-parent"></div>
+
+
+</body>
+<script type="text/javascript" src="app.js"></script>
+
+</html>
