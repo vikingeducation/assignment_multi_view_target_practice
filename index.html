@@ -10,7 +10,17 @@
 </head>
 <body>
   <div class="container">
+    <header>
+      Multi-View Target Practice   
+      <span ui-view='main-header'></span>
+    </header>
+
     <main-nav></main-nav>
+
+    <h2>Parent</h2>
+    <div ui-view></div>
+    <div ui-view='named-parent'></div>
+
     <!-- <div ui-view>
     </div> -->
   </div>
