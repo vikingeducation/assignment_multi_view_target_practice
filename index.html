@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="TargetPractice">
+
+<head>
+  <meta charset="utf-8">
+  <title>Multi-View Target Practice</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+</head>
+
+<body>
+<nav>
+  <a ui-sref="parent">Parent</a>
+  <a ui-sref="parent.child">Child</a>
+  <a ui-sref="parent.child.grandchild">Grandchild</a>
+</nav>
+
+<h1>Multi-View Target Practice</h1>
+<span ui-view="main-header"></span>
+
+<h2>Parent</h2>
+
+<div ui-view></div>
+<div ui-view="named-parent"></div>
+
+
+<script type="text/javascript" src='/app.js'>
+
+
+</script>
+</body>
+
+</html>
