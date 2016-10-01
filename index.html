@@ -11,8 +11,18 @@
   </head>
   <body ng-app="TargetPractice">
     <nav>
-
+      <a ui-sref="parent">Parent</a>
     </nav>
+
+    <header>
+      <h1>Multi-View Target Practice</h1>
+      <span ui-view="main-header"></span>
+    </header>
+
+    <h2>Parent</h2>
+
+    <div ui-view></div>
+    <div ui-view="named-parent"></div>
 
     <!-- app -->
     <script src="javascript/app.js" charset="utf-8"></script>
