@@ -15,13 +15,15 @@
     <span ui-view="main-header"></span>
   </header>
   <nav>
-    Links: <a ui-sref="parent">parent</a> <a ui-sref="parent.child">child</a>
+    Links: <a ui-sref="parent">parent</a>
+    <a ui-sref="parent.child">child</a>
+    <a ui-sref="parent.child.grandchild">grandchild</a>
   </nav>
 
   <h2>Parent</h2>
 <hr>
   <div ui-view></div>
-<hr>  
+<hr>
   <div ui-view="named-parent"></div>
 
 
