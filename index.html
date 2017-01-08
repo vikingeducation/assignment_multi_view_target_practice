@@ -1,0 +1,35 @@
+<html ng-app="TargetPractice">
+<head>
+  <title>TargetPractice</title>
+  <script src="https://cdn.jsdelivr.net/lodash/4.16.2/lodash.min.js" charset="utf-8"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="js/javascript/angular.js"></script>
+  <script src="js/javascript/angular-ui-router.js"></script>
+  <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+<h1>Multi-View Target Practice</h1><span ui-view="main-header"></span>
+<a ui-sref="parent">parent</a>
+<a ui-sref="parent.child">child</a>
+<a ui-sref="parent.child.grandchild">grandchild</a>
+<h2>Parent</h2>
+
+<div ui-view></div>
+<div ui-view="named-parent"></div>
+
+
+</body>
+  <!-- angular app -->
+  <script src = "js/app.js"></script>
+  <!-- services -->
+  <!-- controllers -->
+  <!-- directives -->
+  <!-- filters -->
+
+</html>
