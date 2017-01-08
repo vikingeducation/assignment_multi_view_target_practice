@@ -6,28 +6,22 @@ TargetPractice.config(
   ['$stateProvider', '$urlRouterProvider',
   function($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise('/products');
+    $urlRouterProvider.otherwise('/');
 
     $stateProvider
-      .state('products', {
-        url: '/products',
-        abstract: true,
-        template: '<div ui-view></div>'
-      })
-      .state('products.index', {
-        url: '',
-        templateUrl: 'javascript/templates/products/index.html',
-        controller: 'ProductsIndexCtrl',
-      })
-      .state('products.show', {
-        url: '/:id',
-        templateUrl: 'javascript/templates/products/show.html',
-        controller: 'ProductsShowCtrl'
-      })
-      .state('cart', {
-        url: '/cart',
-        templateUrl: 'javascript/templates/cart/index.html',
-        controller: 'CartIndexCtrl'
+      .state('parent', {
+        url: '/',
+        views: {
+          '': {
+            template: 'Targeting unnamed view from parent state',
+          },
+          'named-parent': {
+            template: 'Targeting named view from parent state',
+          },
+          'main-header': {
+            template: 'Targeting header from parent state',
+          },
+        }
       });
 
   }]);
