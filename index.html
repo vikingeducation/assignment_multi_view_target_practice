@@ -35,15 +35,15 @@
 
           <ul class="nav navbar-nav navbar-right">
             <li><a ui-sref="parent">Parent</a></li>
-            <li><a ui-sref="parent.child">Child</a></li>
-
+            <li><a ui-sref="child">Child</a></li>
+            <li><a ui-sref="grandchild">Grandchild</a></li>
           </ul>
         </div><!-- /.container-fluid -->
       </nav>
 
       <h2>Parent</h2>
-      <div ui-view></div>
       <div ui-view="namedParent"></div>
+      <div ui-view></div>
     </div>
 
     <script src="js/app.js" charset="utf-8"></script>
