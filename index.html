@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="TargetPractice">
+  <head>
+    <meta charset="utf-8">
+    <title>Multi-View Target Practice <span ui-view="main-header"></span></title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="js/lib/angular-ui-router.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body >
+
+    <nav class="navbar navbar-inverse">
+      <div class="navbar-header">
+        <a class="navbar-brand" ui-sref="parent">TargetPractice</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a ui-sref="parent" ui-sref-active="active">Parent</a></li>
+        <li><a ui-sref="parent.child">Child</a></li>
+        <li><a ui-sref="parent.child.grandchild">Granchild</a></li>
+    </ul>
+    </nav>
+  <div class="container">
+    <h2>Parent</h2>
+
+    <div ui-view></div>
+    <div ui-view="named-parent"></div>
+
+</div>
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+</html>
