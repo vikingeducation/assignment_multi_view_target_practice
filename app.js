@@ -39,6 +39,30 @@ TargetPractice.config(function($stateProvider, $urlRouterProvider){
         }
       }
     })
+
+    .state('parent.child.grandchild', {
+      url: '/grandchild',
+      views: {
+        "@parent.child": {
+          templateUrl: "js/templates/grandchild.html"
+        },
+        "@parent.child.grandchild": {
+          template: "Targeting unnamed grandchild view from grandchild state"
+        },
+        "named-grandchild@parent.child.grandchild": {
+          template: "Targeting named grandchild view from grandchild state"
+        },
+        "named-child@parent.child": {
+          template: "Targeting named child view from grandchild state"
+        },
+        "named-parent@": {
+          template: "Targeting named parent view from grandchild state"
+        },
+        "main-header@": {
+          template: "Targeting header from grandchild state"
+        }
+      }
+    })
 })
 
 TargetPractice.controller('MyCtrl',
