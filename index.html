@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="TargetPractice">
+<head>
+  <title>Multi View</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/cosmo/bootstrap.min.css">
+
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.13.1/lodash.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+    
+<header>
+  <nav>
+    <a ui-sref="parent">Parent State</a>
+    <a ui-sref="parent.child">Child State</a>
+    <a ui-sref="parent.child.grandchild">Grandchild State</a>
+  </nav>
+
+
+  <h1>Multi-View Target Practice</h1>
+  <span ui-view="main-header"></span>  
+</header>
+
+
+<h2>Parent</h2>
+<div ui-view></div>
+<div ui-view="named-parent"></div>
+
+
+
+
+  </div>
+</div>
+
+
+<script type="text/javascript" src="app.js"></script>
+
+</body>
+</html>
