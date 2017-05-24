@@ -17,11 +17,26 @@
 
   <body class="container">
 
-<header>
-  <h2>Multi-View Target Practice</h2>
-  <span ui-view="main-header"></span>
-</header>
+    <nav>
+      <a ui-sref="parent">Parent State</a>
+    </nav>
 
+    <hr>
+    <hr>
+
+    <header>
+      <h2>Multi-View Target Practice</h2>
+      <span ui-view="main-header"></span>
+    </header>
+
+
+    <hr>
+    <hr>
+
+    <h2>Parent</h2>
+
+    <div ui-view></div>
+    <div ui-view="named-parent"></div>
 
 
   <!-- angular app -->
