@@ -12,7 +12,18 @@
 <body ng-cloak class="container-fluid">
 
 <nav>
+  <a ui-sref="parent">Parent</a>
 </nav>
+
+<header class="text-center">
+  <h1>Multi-View Target Practice</h1>
+  <small ui-view="main-header"></small>
+</header>
+
+<h2>Parent</h2>
+
+<div ui-view></div>
+<div ui-view="named-parent"></div>
 
 </body>
 
